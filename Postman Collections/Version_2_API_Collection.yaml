@@ -23,13 +23,13 @@ consumes:
 produces:
 - application/json
 paths:
-  /billing-splits/1193/:
+  /billing-splits/30/:
     get:
       description: 'TODO: Add Description'
       summary: Get a Billing Split
       tags:
       - Billing Splits
-      operationId: BillingSplits1193Get
+      operationId: BillingSplits30Get
       produces:
       - application/json
       parameters:
@@ -56,7 +56,7 @@ paths:
       x-unitTests:
       - request:
           method: GET
-          uri: /billing-splits/1193/
+          uri: /billing-splits/30/
           headers:
             Content-Type: application/json
         expectedResponse:
@@ -84,7 +84,7 @@ paths:
   /billing-splits/:
     get:
       description: 'TODO: Add Description'
-      summary: Get all Billing Splits
+      summary: Get many Billing Splits
       tags:
       - Billing Splits
       operationId: BillingSplitsGet
@@ -102,1311 +102,15 @@ paths:
           schema:
             type: array
             items:
-              $ref: '#/definitions/SuccessfulRetrievalOfBillingSplit'
+              $ref: '#/definitions/SuccessfulRetrievalOfABillingSplit'
           examples:
             application/json:
-            - splitter_name: JS
-              firm_id: 13
-              percentage: 99
-              name: Chris
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: js
-            - splitter_name: SHOULDER
-              firm_id: 13
-              percentage: 55
-              name: Joe Shmo
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: shoulder
-            - splitter_name: HIP
-              firm_id: 13
-              percentage: 5
-              name: Joe Shmo
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: hip
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: HIP
-              firm_id: 13
-              percentage: 5
-              name: Joe Shmo
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: hip
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: Chris Rhodes
-              firm_id: 13
-              percentage: 70
-              name: Chris Rhodes 70%
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chris-rhodes
-            - splitter_name: Chris Rhodes
-              firm_id: 13
-              percentage: 50
-              name: Chris Rhodes 50%
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chris-rhodes
-            - splitter_name: John Coll
-              firm_id: 13
-              percentage: 50
-              name: John Coll 50%
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: john-coll
-            - splitter_name: John Kostic
-              firm_id: 13
-              percentage: 70
-              name: John Kostic 70%
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: john-kostic
-            - splitter_name: John Lavine
-              firm_id: 13
-              percentage: 50
-              name: John Lavine 50%
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: john-lavine
-            - splitter_name: OSAGE
-              firm_id: 13
-              percentage: 5
-              name: OSAGE 5%
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: osage
-            - splitter_name: OSAGE
-              firm_id: 13
-              percentage: 25
-              name: OSAGE 25%
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: osage
-            - splitter_name: Scott Parent
-              firm_id: 13
-              percentage: 50
-              name: Scott Parent 50%
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: scott-parent
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: CHRIS
-              firm_id: 13
-              percentage: 3
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chris
-            - splitter_name: WHITING
-              firm_id: 13
-              percentage: 3
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: whiting
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: PLUMB
-              firm_id: 13
-              percentage: 55
-              name: Joe Shmo
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: plumb
-            - splitter_name: PATCH
-              firm_id: 13
-              percentage: 26
-              name: Joe Shmo
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: patch
-            - splitter_name: KARATE
-              firm_id: 13
-              percentage: 22
-              name: Joe Shmo
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: karate
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: BS
-              firm_id: 13
-              percentage: 100
-              name: Billy Bob
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: bs
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: CAT
-              firm_id: 13
-              percentage: 80
-              name: Joe Shmo
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: cat
-            - splitter_name: BOOYAH
-              firm_id: 13
-              percentage: 11
-              name: Joe Shmo
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: booyah
-            - splitter_name: YESS
-              firm_id: 13
-              percentage: 12
-              name: Joe Shmo
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: yess
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: JOHNSON
-              firm_id: 13
-              percentage: 11
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: johnson
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: KENT
-              firm_id: 13
-              percentage: 11
-              name: Joe Shmo
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: kent
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: JOHNSON
-              firm_id: 13
-              percentage: 11
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: johnson
-            - splitter_name: JS
-              firm_id: 13
-              percentage: 50
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: js
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 33
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: David
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: Chrisw
-              firm_id: 13
-              percentage: 54
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: chrisw
-            - splitter_name: DAVID
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: GEORGE
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: george
             - splitter_name: CLARK
               firm_id: 13
               percentage: 1
               name: ''
               firm: 'Pacific Specialty Investments Group: FA7406CAPL'
               splitter_slug: clark
-            - splitter_name: DAVID
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: david
-            - splitter_name: GEORGE
-              firm_id: 13
-              percentage: 22
-              name: ''
-              firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-              splitter_slug: george
       x-unitTests:
       - request:
           method: GET
@@ -1420,15 +124,15 @@ paths:
           x-arrayCheckCount: false
           x-matchResponseSchema: true
           headers:
-            Allow: GET, POST, PUT
+            Allow: GET, PUT, DELETE
             Content-Type: application/json
-            Date: Thu, 26 Jul 2018 14:48:46 GMT
+            Date: Thu, 26 Jul 2018 14:47:08 GMT
             Server: WSGIServer/0.2 CPython/3.6.5
             X-Frame-Options: SAMEORIGIN
-          body: '[{"splitter_name":"JS","firm_id":13.0,"percentage":99.0,"name":"Chris","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"js"},{"splitter_name":"SHOULDER","firm_id":13.0,"percentage":55.0,"name":"Joe Shmo","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"shoulder"},{"splitter_name":"HIP","firm_id":13.0,"percentage":5.0,"name":"Joe Shmo","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"hip"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"HIP","firm_id":13.0,"percentage":5.0,"name":"Joe Shmo","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"hip"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"Chris Rhodes","firm_id":13.0,"percentage":70.0,"name":"Chris Rhodes 70%","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chris-rhodes"},{"splitter_name":"Chris Rhodes","firm_id":13.0,"percentage":50.0,"name":"Chris Rhodes 50%","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chris-rhodes"},{"splitter_name":"John Coll","firm_id":13.0,"percentage":50.0,"name":"John Coll 50%","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"john-coll"},{"splitter_name":"John Kostic","firm_id":13.0,"percentage":70.0,"name":"John Kostic 70%","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"john-kostic"},{"splitter_name":"John Lavine","firm_id":13.0,"percentage":50.0,"name":"John Lavine 50%","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"john-lavine"},{"splitter_name":"OSAGE","firm_id":13.0,"percentage":5.0,"name":"OSAGE 5%","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"osage"},{"splitter_name":"OSAGE","firm_id":13.0,"percentage":25.0,"name":"OSAGE 25%","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"osage"},{"splitter_name":"Scott Parent","firm_id":13.0,"percentage":50.0,"name":"Scott Parent 50%","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"scott-parent"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"CHRIS","firm_id":13.0,"percentage":3.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chris"},{"splitter_name":"WHITING","firm_id":13.0,"percentage":3.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"whiting"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"PLUMB","firm_id":13.0,"percentage":55.0,"name":"Joe Shmo","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"plumb"},{"splitter_name":"PATCH","firm_id":13.0,"percentage":26.0,"name":"Joe Shmo","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"patch"},{"splitter_name":"KARATE","firm_id":13.0,"percentage":22.0,"name":"Joe Shmo","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"karate"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"BS","firm_id":13.0,"percentage":100.0,"name":"Billy Bob","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"bs"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"CAT","firm_id":13.0,"percentage":80.0,"name":"Joe Shmo","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"cat"},{"splitter_name":"BOOYAH","firm_id":13.0,"percentage":11.0,"name":"Joe Shmo","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"booyah"},{"splitter_name":"YESS","firm_id":13.0,"percentage":12.0,"name":"Joe Shmo","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"yess"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"JOHNSON","firm_id":13.0,"percentage":11.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"johnson"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"KENT","firm_id":13.0,"percentage":11.0,"name":"Joe Shmo","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"kent"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"JOHNSON","firm_id":13.0,"percentage":11.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"johnson"},{"splitter_name":"JS","firm_id":13.0,"percentage":50.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"js"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":33.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"David","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"Chrisw","firm_id":13.0,"percentage":54.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"chrisw"},{"splitter_name":"DAVID","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"GEORGE","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"george"},{"splitter_name":"CLARK","firm_id":13.0,"percentage":1.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"clark"},{"splitter_name":"DAVID","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"david"},{"splitter_name":"GEORGE","firm_id":13.0,"percentage":22.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"george"}]'
+          body: '[{"splitter_name":"CLARK","firm_id":13.0,"percentage":1.0,"name":"","firm":"Pacific Specialty Investments Group: FA7406CAPL","splitter_slug":"clark"}]'
         x-testShouldPass: true
         x-testEnabled: true
-        x-testName: Get all Billing Splits
+        x-testName: Get many Billing Splits
         x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
@@ -1482,7 +186,7 @@ paths:
           uri: /billing-splits/
           headers:
             Content-Type: application/json
-          body: '[{"name":"Joe Shmo","percentage":9,"splitter_name":"MOROTE"},{"name":"Joe Shmo","percentage":99,"splitter_name":"IPPON"}]'
+          body: '[{"firm_id":13,"name":"Joe Shmo","percentage":9,"splitter_name":"Superman","splitter_slug":"Superman-slug"},{"firm_id":13,"name":"Joe Shmo","percentage":99,"splitter_name":"Batman","splitter_slug":"Batman-slug"}]'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: RAW
@@ -1553,7 +257,7 @@ paths:
           uri: /billing-splits
           headers:
             Content-Type: application/json
-          body: '[{"id":1158,"name":"Joe Shmo","splitter_name":"BATMAN","percentage":1},{"id":1159,"name":"Joe Shmo","splitter_name":"SUPERMAN","percentage":11}]'
+          body: '[{"firm_id":13,"id":739,"splitter_slug":"newslug1","name":"Joe Shmo","splitter_name":"newbatman","percentage":1},{"firm_id":13,"id":740,"splitter_slug":"newslug2","name":"Joe Shmo","splitter_name":"newsuperman","percentage":11}]'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: RAW
@@ -1576,13 +280,82 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-  /billing-splits/1191/:
+  /billing-splits/740:
+    put:
+      description: 'TODO: Add Description'
+      summary: Update a Billing Split/pk
+      tags:
+      - Billing Splits
+      operationId: BillingSplits740Put
+      produces:
+      - application/json
+      parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/UpdateABillingSplit~1pkrequest'
+      responses:
+        200:
+          description: ''
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/SuccessInUpdatingBillingSplit'
+          examples:
+            application/json:
+            - id: 1163
+              splitter_name: CLARK
+              percentage: 1
+              firm_id: 13
+              splitter_slug: clark
+            - id: 1159
+              splitter_name: KENT
+              percentage: 11
+              firm_id: 13
+              splitter_slug: kent
+      x-unitTests:
+      - request:
+          method: PUT
+          uri: /billing-splits/740
+          headers:
+            Content-Type: application/json
+          body: '{"firm_id":13,"id":739,"splitter_slug":"oneupdateslug","name":"Joe Shmo","splitter_name":"singlebatman","percentage":11}'
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: RAW
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers:
+            Allow: GET, POST, PUT
+            Content-Type: application/json
+            Date: Thu, 26 Jul 2018 14:54:48 GMT
+            Server: WSGIServer/0.2 CPython/3.6.5
+            X-Frame-Options: SAMEORIGIN
+          body: '[{"id":1163,"splitter_name":"CLARK","percentage":1,"firm_id":13,"splitter_slug":"clark"},{"id":1159,"splitter_name":"KENT","percentage":11,"firm_id":13,"splitter_slug":"kent"}]'
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Update a Billing Split/pk
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /billing-splits/740/:
     delete:
       description: 'TODO: Add Description'
       summary: Delete a Billing Split
       tags:
       - Billing Splits
-      operationId: BillingSplits1191Delete
+      operationId: BillingSplits740Delete
       produces:
       - application/json
       parameters:
@@ -1602,13 +375,13 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-  /billing-splits/{id}/:
-    delete:
+  /billing-splits/delete-many/:
+    post:
       description: "NOTE: This isn't really supported on most APIs. I think this is good for debugging purposes, but shouldn't really be needed by the end user."
       summary: Delete many Billing Splits
       tags:
       - Billing Splits
-      operationId: BillingSplitsByIdDelete
+      operationId: BillingSplitsDeleteManyPost
       produces:
       - application/json
       consumes:
@@ -1621,11 +394,6 @@ paths:
         description: ''
       - name: ids
         in: formData
-        required: true
-        type: string
-        description: ''
-      - name: id
-        in: path
         required: true
         type: string
         description: ''
@@ -3334,7 +2102,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: '#/definitions/GetAnAccountGroup68'
+              $ref: '#/definitions/GetAnAccountGroup70'
           examples:
             application/json:
             - transaction_id: 1:HOLMER:DIV:540424108:2017-09-12
@@ -3424,7 +2192,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: '#/definitions/GetAllAccountGroup70'
+              $ref: '#/definitions/GetAllAccountGroup72'
       x-unitTests: []
       x-operation-settings:
         CollectParameters: false
@@ -3666,7 +2434,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: '#/definitions/GetAnAccountGroup74'
+              $ref: '#/definitions/GetAnAccountGroup76'
           examples:
             application/json:
             - issuer_cusip: 52899W740
@@ -3925,58 +2693,21 @@ definitions:
     - name
     - firm
     - splitter_slug
-  SuccessfulRetrievalOfBillingSplit:
-    title: Successful retrieval of Billing Split
-    example:
-      splitter_name: JS
-      firm_id: 13
-      percentage: 99
-      name: Chris
-      firm: 'Pacific Specialty Investments Group: FA7406CAPL'
-      splitter_slug: js
-    type: object
-    properties:
-      splitter_name:
-        description: ''
-        example: JS
-        type: string
-      firm_id:
-        description: ''
-        example: 13
-        type: number
-        format: double
-      percentage:
-        description: ''
-        example: 99
-        type: number
-        format: double
-      name:
-        description: ''
-        example: Chris
-        type: string
-      firm:
-        description: ''
-        example: 'Pacific Specialty Investments Group: FA7406CAPL'
-        type: string
-      splitter_slug:
-        description: ''
-        example: js
-        type: string
-    required:
-    - splitter_name
-    - firm_id
-    - percentage
-    - name
-    - firm
-    - splitter_slug
   CreateBillingSplit(s)request:
     title: Create Billing Split(s)Request
     example:
+      firm_id: 13
       name: Joe Shmo
       percentage: 9
-      splitter_name: MOROTE
+      splitter_name: Superman
+      splitter_slug: Superman-slug
     type: object
     properties:
+      firm_id:
+        description: ''
+        example: 13
+        type: integer
+        format: int32
       name:
         description: ''
         example: Joe Shmo
@@ -3988,12 +2719,18 @@ definitions:
         format: int32
       splitter_name:
         description: ''
-        example: MOROTE
+        example: Superman
+        type: string
+      splitter_slug:
+        description: ''
+        example: Superman-slug
         type: string
     required:
+    - firm_id
     - name
     - percentage
     - splitter_name
+    - splitter_slug
   SuccessfulCreationOfBillingSplit:
     title: Successful creation of Billing Split
     example:
@@ -4035,24 +2772,35 @@ definitions:
   UpdateBillingSplit(s)request:
     title: Update Billing Split(s)Request
     example:
-      id: 1158
+      firm_id: 13
+      id: 739
+      splitter_slug: newslug1
       name: Joe Shmo
-      splitter_name: BATMAN
+      splitter_name: newbatman
       percentage: 1
     type: object
     properties:
-      id:
+      firm_id:
         description: ''
-        example: 1158
+        example: 13
         type: integer
         format: int32
+      id:
+        description: ''
+        example: 739
+        type: integer
+        format: int32
+      splitter_slug:
+        description: ''
+        example: newslug1
+        type: string
       name:
         description: ''
         example: Joe Shmo
         type: string
       splitter_name:
         description: ''
-        example: BATMAN
+        example: newbatman
         type: string
       percentage:
         description: ''
@@ -4060,7 +2808,9 @@ definitions:
         type: integer
         format: int32
     required:
+    - firm_id
     - id
+    - splitter_slug
     - name
     - splitter_name
     - percentage
@@ -4103,6 +2853,51 @@ definitions:
     - percentage
     - firm_id
     - splitter_slug
+  UpdateABillingSplit/pkrequest:
+    title: Update a Billing Split/pkRequest
+    example:
+      firm_id: 13
+      id: 739
+      splitter_slug: oneupdateslug
+      name: Joe Shmo
+      splitter_name: singlebatman
+      percentage: 11
+    type: object
+    properties:
+      firm_id:
+        description: ''
+        example: 13
+        type: integer
+        format: int32
+      id:
+        description: ''
+        example: 739
+        type: integer
+        format: int32
+      splitter_slug:
+        description: ''
+        example: oneupdateslug
+        type: string
+      name:
+        description: ''
+        example: Joe Shmo
+        type: string
+      splitter_name:
+        description: ''
+        example: singlebatman
+        type: string
+      percentage:
+        description: ''
+        example: 11
+        type: integer
+        format: int32
+    required:
+    - firm_id
+    - id
+    - splitter_slug
+    - name
+    - splitter_name
+    - percentage
   GetABillingMinimum:
     title: Get a Billing Minimum
     type: object
@@ -6050,15 +4845,15 @@ definitions:
           rate: 0.72999999999999998
         type: array
         items:
-          $ref: '#/definitions/Tier34'
+          $ref: '#/definitions/Tier36'
     required:
     - id
     - name
     - flat_rate
     - collection_type
     - tiers
-  Tier34:
-    title: Tier34
+  Tier36:
+    title: Tier36
     example:
       id: 643
       min_balance: 0
@@ -6600,15 +5395,15 @@ definitions:
           fee_location_option: Z
         type: array
         items:
-          $ref: '#/definitions/Assignment54'
+          $ref: '#/definitions/Assignment56'
     required:
     - id
     - name
     - slug
     - firm_id
     - assignments
-  Assignment54:
-    title: Assignment54
+  Assignment56:
+    title: Assignment56
     example:
       id: 30143
       fee_location: 1
@@ -7714,8 +6509,8 @@ definitions:
     - symbol
     - original_face
     - purchase_date
-  GetAnAccountGroup68:
-    title: Get an Account Group68
+  GetAnAccountGroup70:
+    title: Get an Account Group70
     example:
       transaction_id: 1:HOLMER:DIV:540424108:2017-09-12
       special_description_flag: ''
@@ -7892,8 +6687,8 @@ definitions:
     - trade_date
     - asset_type_broad
     - original_cost
-  GetAllAccountGroup70:
-    title: Get all Account Group70
+  GetAllAccountGroup72:
+    title: Get all Account Group72
     type: object
     properties:
       account:
@@ -8172,8 +6967,8 @@ definitions:
     - cusip
     - sic_code
     - is_tracked
-  GetAnAccountGroup74:
-    title: Get an Account Group74
+  GetAnAccountGroup76:
+    title: Get an Account Group76
     example:
       issuer_cusip: 52899W740
       ts_end_date: 2018-07-05
