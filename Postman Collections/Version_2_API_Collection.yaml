@@ -408,13 +408,13 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-  /billing-minimums/15/:
+  /billing-minimums/10/:
     get:
       description: 'TODO: Add Description'
       summary: Get a Billing Minimum
       tags:
       - Billing Minimums
-      operationId: BillingMinimums15Get
+      operationId: BillingMinimums10Get
       produces:
       - application/json
       parameters:
@@ -535,6 +535,40 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
+  /billing-minimums/10:
+    put:
+      description: 'TODO: Add Description'
+      summary: Update a Billing Minimum/pk
+      tags:
+      - Billing Minimums
+      operationId: BillingMinimums10Put
+      produces:
+      - application/json
+      parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/UpdateABillingMinimum~1pkrequest'
+      responses:
+        200:
+          description: ''
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/UpdateBillingMinimum(s)'
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
   /billing-minimums/14/:
     delete:
       description: 'TODO: Add Description'
@@ -582,13 +616,13 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-  /billing-minimums/{id}/:
-    delete:
+  /billing-minimums/delete-many/:
+    post:
       description: "NOTE: This isn't really supported on most APIs. I think this is good for debugging purposes, but shouldn't really be needed by the end user."
       summary: Delete many Billing Minimums
       tags:
       - Billing Minimums
-      operationId: BillingMinimumsByIdDelete
+      operationId: BillingMinimumsDeleteManyPost
       produces:
       - application/json
       consumes:
@@ -604,17 +638,34 @@ paths:
         required: true
         type: string
         description: ''
-      - name: id
-        in: path
-        required: true
-        type: string
-        description: ''
       responses:
         204:
           description: ''
           schema:
             type: object
-      x-unitTests: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /billing-minimums/delete-many/
+          headers:
+            Content-Type: application/json
+          body: ids=17,18
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers:
+            Allow: GET, PUT, DELETE
+            Content-Length: 0
+            Date: Tue, 07 Aug 2018 21:51:20 GMT
+            Server: WSGIServer/0.2 CPython/3.6.5
+            X-Frame-Options: SAMEORIGIN
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Delete many Billing Minimums
+        x-testDescription: "NOTE: This isn't really supported on most APIs. I think this is good for debugging purposes, but shouldn't really be needed by the end user."
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -2102,7 +2153,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: '#/definitions/GetAnAccountGroup70'
+              $ref: '#/definitions/GetAnAccountGroup73'
           examples:
             application/json:
             - transaction_id: 1:HOLMER:DIV:540424108:2017-09-12
@@ -2192,7 +2243,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: '#/definitions/GetAllAccountGroup72'
+              $ref: '#/definitions/GetAllAccountGroup75'
       x-unitTests: []
       x-operation-settings:
         CollectParameters: false
@@ -2434,7 +2485,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: '#/definitions/GetAnAccountGroup76'
+              $ref: '#/definitions/GetAnAccountGroup79'
           examples:
             application/json:
             - issuer_cusip: 52899W740
@@ -3220,11 +3271,17 @@ definitions:
   CreateBillingMinimum(s)request:
     title: Create Billing Minimum(s)Request
     example:
+      firm_id: 13
       name: Test 9
       value: 99
       valuetype: F
     type: object
     properties:
+      firm_id:
+        description: ''
+        example: 13
+        type: integer
+        format: int32
       name:
         description: ''
         example: Test 9
@@ -3239,6 +3296,7 @@ definitions:
         example: F
         type: string
     required:
+    - firm_id
     - name
     - value
     - valuetype
@@ -3275,15 +3333,21 @@ definitions:
   UpdateBillingMinimum(s)request:
     title: Update Billing Minimum(s)Request
     example:
-      id: 14
+      id: 10
+      firm_id: 13
       name: Updated One
       value: 12
-      valuetype: D
+      valuetype: P
     type: object
     properties:
       id:
         description: ''
-        example: 14
+        example: 10
+        type: integer
+        format: int32
+      firm_id:
+        description: ''
+        example: 13
         type: integer
         format: int32
       name:
@@ -3297,10 +3361,11 @@ definitions:
         format: int32
       valuetype:
         description: ''
-        example: D
+        example: P
         type: string
     required:
     - id
+    - firm_id
     - name
     - value
     - valuetype
@@ -3334,6 +3399,45 @@ definitions:
     - valuetype
     - firm_id
     - firm
+  UpdateABillingMinimum/pkrequest:
+    title: Update a Billing Minimum/pkRequest
+    example:
+      id: 10
+      firm_id: 13
+      name: Updated Single
+      value: 20
+      valuetype: P
+    type: object
+    properties:
+      id:
+        description: ''
+        example: 10
+        type: integer
+        format: int32
+      firm_id:
+        description: ''
+        example: 13
+        type: integer
+        format: int32
+      name:
+        description: ''
+        example: Updated Single
+        type: string
+      value:
+        description: ''
+        example: 20
+        type: integer
+        format: int32
+      valuetype:
+        description: ''
+        example: P
+        type: string
+    required:
+    - id
+    - firm_id
+    - name
+    - value
+    - valuetype
   GetABillingReport:
     title: Get a Billing Report
     type: object
@@ -4845,15 +4949,15 @@ definitions:
           rate: 0.72999999999999998
         type: array
         items:
-          $ref: '#/definitions/Tier36'
+          $ref: '#/definitions/Tier39'
     required:
     - id
     - name
     - flat_rate
     - collection_type
     - tiers
-  Tier36:
-    title: Tier36
+  Tier39:
+    title: Tier39
     example:
       id: 643
       min_balance: 0
@@ -5395,15 +5499,15 @@ definitions:
           fee_location_option: Z
         type: array
         items:
-          $ref: '#/definitions/Assignment56'
+          $ref: '#/definitions/Assignment59'
     required:
     - id
     - name
     - slug
     - firm_id
     - assignments
-  Assignment56:
-    title: Assignment56
+  Assignment59:
+    title: Assignment59
     example:
       id: 30143
       fee_location: 1
@@ -6509,8 +6613,8 @@ definitions:
     - symbol
     - original_face
     - purchase_date
-  GetAnAccountGroup70:
-    title: Get an Account Group70
+  GetAnAccountGroup73:
+    title: Get an Account Group73
     example:
       transaction_id: 1:HOLMER:DIV:540424108:2017-09-12
       special_description_flag: ''
@@ -6687,8 +6791,8 @@ definitions:
     - trade_date
     - asset_type_broad
     - original_cost
-  GetAllAccountGroup72:
-    title: Get all Account Group72
+  GetAllAccountGroup75:
+    title: Get all Account Group75
     type: object
     properties:
       account:
@@ -6967,8 +7071,8 @@ definitions:
     - cusip
     - sic_code
     - is_tracked
-  GetAnAccountGroup76:
-    title: Get an Account Group76
+  GetAnAccountGroup79:
+    title: Get an Account Group79
     example:
       issuer_cusip: 52899W740
       ts_end_date: 2018-07-05
