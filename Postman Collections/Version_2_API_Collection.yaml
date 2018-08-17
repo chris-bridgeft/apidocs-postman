@@ -186,7 +186,7 @@ paths:
           uri: /billing-splits/
           headers:
             Content-Type: application/json
-          body: '[{"firm_id":13,"name":"Joe Shmo","percentage":9,"splitter_name":"Superman","splitter_slug":"Superman-slug"},{"firm_id":13,"name":"Joe Shmo","percentage":99,"splitter_name":"Batman","splitter_slug":"Batman-slug"}]'
+          body: '[{"firm_id":1,"name":"Clark Kent","percentage":9,"splitter_name":"Superman","splitter_slug":"Superman-slug"},{"firm_id":1,"name":"Bruce Wayne","percentage":99,"splitter_name":"Batman","splitter_slug":"Batman-slug"}]'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: RAW
@@ -2747,8 +2747,8 @@ definitions:
   CreateBillingSplit(s)request:
     title: Create Billing Split(s)Request
     example:
-      firm_id: 13
-      name: Joe Shmo
+      firm_id: 1
+      name: Clark Kent
       percentage: 9
       splitter_name: Superman
       splitter_slug: Superman-slug
@@ -2756,12 +2756,12 @@ definitions:
     properties:
       firm_id:
         description: ''
-        example: 13
+        example: 1
         type: integer
         format: int32
       name:
         description: ''
-        example: Joe Shmo
+        example: Clark Kent
         type: string
       percentage:
         description: ''
